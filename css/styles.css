@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eee;
+    font-family: 'Josefin sans', sans-serif;
+    background: linear-gradient(120deg, rgba(50, 150, 100, 0.2), rgba(0, 0, 100, 0.3));
+    background-image: url('/img/clouds.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 65%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.65);
+    height: 500px;
+    max-height: 80vh;
+    overflow: auto;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px 10px;
+    transition: all 1.5s;
+    box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
+}
+
+.weather-content p {
+    color: #023047;
+}
+
+.get-weather {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    /* width: 80%; */
+    /* height: 80vh; */
+    overflow: auto;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.get-weather .ciudad {
+
+    width: 100%;
+    margin: 0px 0 25px;
+    display: inline-block;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, .5);
+    color: #023047;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 1em 1em;
+    border: 1px solid rgba(0, 0, 0, .2);
+    outline: none;
+
+
+}
+
+.get-weather .ciudad:focus,
+.pais:focus,
+.ciudades:focus {
+
+    border: 2px solid #8ECAE6;
+}
+
+.get-weather #cities, .get-weather #countries {
+    display: none;
+}
+
+.get-weather .btnBuscar {
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #023047;
+
+}
+
+.get-weather .btnBuscar:hover {
+    background-color: #219EBC;
+}
+
+.result {
+    width: 80%;
+    margin-bottom: 1em;
+    transition: all 2s;
+}
+
+.result h1 {
+    color: #023047;
+    margin: .1em 0;
+    text-transform: uppercase;
+}
+
+.result .temp span {
+    font-size: 5em;
+    font-weight: bold;
+    text-align: left;
+    color: #219EBC;
+}
+
+.result>div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-weight: bold;
+}
+
+.result .description {
+    text-align: center;
+    color: #023047;
+}
+
+.result .description img {
+    filter: drop-shadow(.1em .1em .3em hsl(0deg 0% 0% / .5));
+}
+
+.result .description p {
+    font-weight: 100;
+    color: #219EBC;
+    ;
+    font-variant: small-caps;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: rgba(255, 255, 255, .5);
+    background-image: none;
+    flex: 1;
+    padding: 1em 1em;
+    color: #023047;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select option {
+    background: #023047;
+    color: #fff;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+
+    /* background: #5c6664; */
+    overflow: hidden;
+    border-radius: .25em;
+    margin-bottom: 1em;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    pointer-events: none;
+    color: #023047;
+    transition: .25s all ease;
+}
+
+.select:hover::after {
+    color: #8ECAE6;
+}
+
+.select select#city,
+.select select#country {
+    width: 100%;
+}
+p.alert-message{
+    color: red;
+    margin-top: .5em;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+.footer {
+    min-height: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::placeholder {
+    color: #219EBC;
+}
+
+@media(max-width: 450px) {
+    .select {
+        max-width: 15em;
+    }
+
+}
