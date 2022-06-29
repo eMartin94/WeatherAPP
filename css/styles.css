@@ -110,7 +110,7 @@ body {
 
 .result h1 {
     color: #023047;
-    margin: .1em 0;
+    margin: 0;
     text-transform: uppercase;
 }
 
@@ -229,17 +229,30 @@ p.alert-message{
         width: 90%;
         height: auto;
         padding: 2em 1em;
+        gap: .5rem;
+    }
+
+    .footer p{
+        font-size: 12px;
     }
 }
 @media(max-width: 390px){
+    .weather-content{
+        padding: 1rem .5rem;
+    }
+
     .result > div{
         gap: 0;
         display: flex;
         flex-direction: column;
         text-align: center;
         transition: all 1s;
-        /* padding: 2em 2em; */
-        
+    }
+    .result h1{
+       font-size: 1.5rem; 
+    }
+    .result .temp span{
+        font-size: 4rem;
     }
     .select {
         max-width: 15em;
