@@ -9,7 +9,7 @@ body {
     background: #eee;
     font-family: 'Josefin sans', sans-serif;
     background: linear-gradient(120deg, rgba(50, 150, 100, 0.2), rgba(0, 0, 100, 0.3));
-    background-image: url('/img/clouds.jpg');
+    background-image: url('../img/clouds.jpg');
     background-size: cover;
     display: flex;
     flex-direction: column;

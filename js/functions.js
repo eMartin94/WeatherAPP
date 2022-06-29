@@ -79,7 +79,7 @@ function showWeather(data) {
             <span>${degress}°</span>
             </div>
             <div class="description">
-            <img src="http://openweathermap.org/img/wn/${arr.icon}@2x.png" alt="">
+            <img src="https://openweathermap.org/img/wn/${arr.icon}@2x.png" alt="">
             <p>${arr.description}</p>
             <p>max: ${max}° | min:  ${min}°</p>
             
