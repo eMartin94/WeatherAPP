@@ -143,7 +143,7 @@ body {
     font-variant: small-caps;
 }
 
-select {
+select, .selection .select2-selection{
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -160,19 +160,21 @@ select {
     font-size: 1em;
     font-weight: bold;
 }
-
-select::-ms-expand {
+select::-ms-expand{
     display: none;
 }
 
+.selection .select2-selection .select2-selection__arrow{
+    display: none;
+}
 select option {
     background: #023047;
     color: #fff;
 }
 
-.select {
+.select, .selection .select2-selection {
     position: relative;
-    display: flex;
+    /* display: flex; */
     width: 20em;
     height: 3em;
     line-height: 3;
@@ -183,7 +185,7 @@ select option {
     margin-bottom: 1em;
 }
 
-.select::after {
+.select::after{
     content: '\25BC';
     position: absolute;
     top: 0;
@@ -199,7 +201,7 @@ select option {
 .select:hover::after {
     color: #8ECAE6;
 }
-
+.select select#continent,
 .select select#city,
 .select select#country {
     width: 100%;
