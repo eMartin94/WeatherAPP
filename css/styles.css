@@ -222,9 +222,22 @@ p.alert-message{
     color: #219EBC;
 }
 
-@media(max-width: 450px) {
+@media(max-width: 500px) {
     .select {
         max-width: 15em;
     }
+    
+    .weather-content{
+        width: 90%;
+        height: auto;
+    }
+}
+@media(max-width: 390px){
+    .result > div{
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
 
+    }
 }
